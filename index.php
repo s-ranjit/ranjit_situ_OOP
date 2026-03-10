@@ -1,14 +1,14 @@
 <?php
 spl_autoload_register(function ($class) {
-    var_dump($class);
+    // var_dump($class);
 
 $class = str_replace('MyProject\\', '', $class);
-var_dump($class);
+// var_dump($class);
 $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
-var_dump($class);
+// var_dump($class);
     $filepath = __DIR__ . '/includes/classes/' . $class . '.php';
     $filepath = str_replace('/', DIRECTORY_SEPARATOR, $filepath);
-    var_dump($filepath);
+    // var_dump($filepath);
     require_once $filepath;
 
     });
@@ -20,19 +20,63 @@ var_dump($class);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flowers OOP</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+     <!-- Link to google fonts for "Raleway" Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <h1>Welcome to the World of Flowers</h1>
+<div>
+        <section class="full-width-grid-con">
+            <h2 class="hidden">Main Navigation</h2>
+            <header id="main-header" class="full-width-grid-con">
+                <div id="logo" class="col-start-1 col-end-2">
+                <a href="index.php"> <img src="images/flowers.svg" alt="Logo">
+               </a>    </div>
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" id="ham-burger">
+                    <img src="images/ham-burger-menu.svg" alt="Menu">
+                </label>
+                <div id="main-nav" class="m-col-start-5 m-col-end-13 l-col-end-12">
+                    <nav class="burger-con">
+                        <ul>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Usage</a></li>
+                            <li><a href="#">Examples</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </div>
+    <main> 
+        <section class="grid-con overview" id="overview">
+        <h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Overview</h2>
+        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">This project demonstrates Object-Oriented Programming (OOP) in PHP using different flower classes.</p>
+        </section>
 
+        <section class="grid-con usage">
+        <h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Usage</h2>
+        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">Simply use any flower class from the <b>MyProject</b> namespace to see it in action.</p>
+        </section>
       <?php
    
 
     $rose = new MyProject\rose();
-    var_dump($rose);   
+    // var_dump($rose);   
     
-    $bird = new MyProject\lily();
-    var_dump($lily); 
+    $lily = new MyProject\lily();
+    // var_dump($lily); 
+    echo '<div class="grid-con flowers">';
+    echo '<h2 class="col-span-full">Examples</h2>';
+    echo '<div class="flower-card col-span-full l-col-start-1 l-col-end-4"><span class="flower-name">Rose</span>: A beautiful red flower!</div>';
+    echo '<div class="flower-card col-span-full l-col-start-5 l-col-end-9"><span class="flower-name">Lily</span>: Elegant and fragrant flower!</div>';
+    echo '</p>'
     ?>
-
+</main>
 </body>
 </html>
