@@ -1,5 +1,12 @@
+@use '../abstracts';
+
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: abstracts.$body-font-family; 
+    padding: 0;
+    margin: 0;
+}
+.hidden {
+    display: none;
 }
 
 p {
