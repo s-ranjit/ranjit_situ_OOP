@@ -72,6 +72,7 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
 
         foreach ($childrenflowers as $flower) {
             var_dump($flower);
+            echo "<h3 class='flower-name'>{$flower->name}</h3>";
             $flower->bloom();
             $flower->grow();
             $flower->fragrance();
