@@ -11,11 +11,11 @@
      justify-content: space-between;
      align-items: center;
      padding: 0 45px;
-     border-bottom: 1px solid pink;
+     border-bottom: 3px solid abstracts.$form-cta-color;
 
      #logo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin-top: 20px;
     }
 #ham-burger {
@@ -121,9 +121,10 @@
   #main-nav nav ul li a {
     font-size: 18px;
     color: abstracts.$body-text-color;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 5px;
     transition: none;
+    font-weight: abstracts.$font-bold;
   }
   #main-nav nav ul li a:hover {
     color: abstracts.$primary-color;
@@ -166,9 +167,10 @@
   #main-nav nav ul li a {
     font-size: 18px;
     color: abstracts.$body-text-color;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 5px;
     transition: none;
+    font-weight: abstracts.$font-bold;
   }
   #main-nav nav ul li a:hover {
     color:abstracts.$accent-color;
