@@ -67,51 +67,20 @@ $rose = new MyProject\rose();
 $lily = new MyProject\lily();
         </pre>
     </section> -->
-      <?php
-   
+       <?php
+       
+        $rose = new MyProject\Rose("Rose", "Red", 10);
+        $lily = new MyProject\Lily("Lily", "White", 6);
+        $daisy = new MyProject\Daisy("Daisy", "Yellow", 7);
+        $hibiscus = new MyProject\Hibiscus("Hibiscus", "Pink", 5);
+        $orchid = new MyProject\Orchid("Orchid", "Purple", 4);
+        $marigold = new MyProject\Marigold("Marigold", "Orange", 18);
 
-    $rose = new MyProject\Rose();
-    var_dump($rose);   
-    
-    $lily = new MyProject\Lily();
-    var_dump($lily); 
+        $childrenflowers = [$rose, $lily, $daisy, $hibiscus, $orchid, $marigold];
 
-    $daisy = new MyProject\Daisy();
-    var_dump($daisy);   
-    
-    $daffodil = new MyProject\Daffodil();
-    var_dump($daffodil); 
-
-    $hibiscus = new MyProject\Hibiscus();
-    var_dump($hibiscus);   
-    
-    $jasmine = new MyProject\Jasmine();
-    var_dump($jasmine); 
-
-    $lotus = new MyProject\Lotus();
-    var_dump($lotus);   
-    
-    $orchid = new MyProject\Orchid();
-    var_dump($orchid); 
-
-    $marigold = new MyProject\Marigold();
-    var_dump($marigold);   
-    
-    $poppy = new MyProject\Poppy();
-    var_dump($poppy); 
-
-    $sunflower = new MyProject\Sunflower();
-    var_dump($sunflower);   
-    
-    $tulip = new MyProject\Tulip();
-    var_dump($tulip); 
-
-    echo '<div class="grid-con flowers">';
-    echo '<h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Examples</h2>';
-    echo '<div class="flower-card col-span-full m-col-start-2 m-col-end-4 l-col-start-1 l-col-end-4"><span class="flower-name">Rose</span>: A beautiful red flower!</div>';
-    echo '<div class="flower-card col-span-full m-col-start-2 m-col-end-6 l-col-start-5 l-col-end-9"><span class="flower-name">Lily</span>: Elegant and fragrant flower!</div>';
-    echo '</p>'
-    ?>
+        
+        
+        ?>
 </main>
 </body>
 </html>
