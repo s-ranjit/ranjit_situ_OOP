@@ -1,7 +1,7 @@
 <?php
 namespace MyProject\FlowerSpecies;
 
-use MyProject\Hibiscus;
+use MyProject\Types\Hibiscus;
 
 class SpiderHibiscus extends Hibiscus {
     public function bloom() {

@@ -1,7 +1,7 @@
 <?php
 namespace MyProject\FlowerSpecies;
 
-use MyProject\Rose;
+use MyProject\Types\Rose;
 
 class BlackRose extends Rose {
     public function bloom() {

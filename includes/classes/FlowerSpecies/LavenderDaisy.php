@@ -1,7 +1,7 @@
 <?php
 namespace MyProject\FlowerSpecies;
 
-use MyProject\Daisy;
+use MyProject\Types\Daisy;
 
 class LavenderDaisy extends Daisy {
     public function bloom() {
