@@ -6,6 +6,7 @@ class Flower {
     public $color;
     public $petals;
 
+    use Watering; 
 
     public function __construct(string $name, string $color, int $petals) {
         $this->name = $name;
@@ -18,10 +19,10 @@ class Flower {
     }
 
     public function fragrance() {
-        echo "<p>  {$this->name} smells wonderful.</p>";
+        echo "<p> {$this->name} smells wonderful.</p>";
     }
 
     public function grow() {
-        echo "<p>  {$this->name} is growing gracefully.</p>";
+        echo "<p> {$this->name} is growing gracefully.</p>";
     }
 }

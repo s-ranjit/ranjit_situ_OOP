@@ -12,6 +12,8 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
     require_once $filepath;
 
     });
+    // filepath for trait 
+    require_once __DIR__ . '/includes/classes/trait/Watering.php';
 ?>
 
 <!DOCTYPE html>
@@ -76,6 +78,7 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
             $flower->bloom();
             $flower->grow();
             $flower->fragrance();
+            $flower->water();
         }
         
         // Species of flowers
@@ -90,10 +93,10 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
         foreach ($flowerspecies as $flower) {
             var_dump($flower);
             echo "<h3 class='flower-name'>{$flower->name}</h3>";
-            
             $flower->bloom();
             $flower->grow();
             $flower->fragrance();
+            $flower->water();
         }
         
         ?>
