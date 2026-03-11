@@ -59,22 +59,57 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
         <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">This project demonstrates Object-Oriented Programming (OOP) in PHP using different flower classes.</p>
         </section>
 
-        <section class="grid-con usage">
+        <!-- <section class="grid-con usage">
         <h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Usage</h2>
-        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">Simply use any flower class from the <b>MyProject</b> namespace to see it in action.</p>
-        </section>
+        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">Simply instantiate any flower class from the <b>MyProject</b> namespace to see it in action.</p>
+        <pre>
+$rose = new MyProject\rose();
+$lily = new MyProject\lily();
+        </pre>
+    </section> -->
       <?php
    
 
     $rose = new MyProject\Rose();
-    // var_dump($rose);   
+    var_dump($rose);   
     
     $lily = new MyProject\Lily();
-    // var_dump($lily); 
+    var_dump($lily); 
+
+    $daisy = new MyProject\Daisy();
+    var_dump($daisy);   
+    
+    $daffodil = new MyProject\Daffodil();
+    var_dump($daffodil); 
+
+    $hibiscus = new MyProject\Hibiscus();
+    var_dump($hibiscus);   
+    
+    $jasmine = new MyProject\Jasmine();
+    var_dump($jasmine); 
+
+    $lotus = new MyProject\Lotus();
+    var_dump($lotus);   
+    
+    $orchid = new MyProject\Orchid();
+    var_dump($orchid); 
+
+    $marigold = new MyProject\Marigold();
+    var_dump($marigold);   
+    
+    $poppy = new MyProject\Poppy();
+    var_dump($poppy); 
+
+    $sunflower = new MyProject\Sunflower();
+    var_dump($sunflower);   
+    
+    $tulip = new MyProject\Tulip();
+    var_dump($tulip); 
+
     echo '<div class="grid-con flowers">';
-    echo '<h2 class="col-span-full">Examples</h2>';
-    echo '<div class="flower-card col-span-full l-col-start-1 l-col-end-4"><span class="flower-name">Rose</span>: A beautiful red flower!</div>';
-    echo '<div class="flower-card col-span-full l-col-start-5 l-col-end-9"><span class="flower-name">Lily</span>: Elegant and fragrant flower!</div>';
+    echo '<h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Examples</h2>';
+    echo '<div class="flower-card col-span-full m-col-start-2 m-col-end-4 l-col-start-1 l-col-end-4"><span class="flower-name">Rose</span>: A beautiful red flower!</div>';
+    echo '<div class="flower-card col-span-full m-col-start-2 m-col-end-6 l-col-start-5 l-col-end-9"><span class="flower-name">Lily</span>: Elegant and fragrant flower!</div>';
     echo '</p>'
     ?>
 </main>
