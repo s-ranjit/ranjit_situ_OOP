@@ -1,7 +1,7 @@
 <?php
 namespace MyProject\FlowerSpecies;
 
-use MyProject\Lily;
+use MyProject\Types\Lily;
 
 class TigerLily extends Lily {
    public function bloom() {

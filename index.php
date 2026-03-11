@@ -63,16 +63,17 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
 
        <?php
        
-        $rose = new MyProject\Rose("Rose", "Red", 10);
-        $lily = new MyProject\Lily("Lily", "White", 6);
-        $daisy = new MyProject\Daisy("Daisy", "Yellow", 7);
-        $hibiscus = new MyProject\Hibiscus("Hibiscus", "Pink", 5);
-        $orchid = new MyProject\Orchid("Orchid", "Purple", 4);
-        $marigold = new MyProject\Marigold("Marigold", "Orange", 18);
+        // types of flowers
+        $rose = new MyProject\Types\Rose("Rose", "Red", 10);
+        $lily = new MyProject\Types\Lily("Lily", "White", 6);
+        $daisy = new MyProject\Types\Daisy("Daisy", "Yellow", 7);
+        $hibiscus = new MyProject\Types\Hibiscus("Hibiscus", "Pink", 5);
+        $orchid = new MyProject\Types\Orchid("Orchid", "Purple", 4);
+        $marigold = new MyProject\Types\Marigold("Marigold", "Orange", 18);
 
-        $childrenflowers = [$rose, $lily, $daisy, $hibiscus, $orchid, $marigold];
+        $flowertypes = [$rose, $lily, $daisy, $hibiscus, $orchid, $marigold];
 
-        foreach ($childrenflowers as $flower) {
+        foreach ($flowertypes as $flower) {
             var_dump($flower);
             echo "<h3 class='flower-name'>{$flower->name}</h3>";
             $flower->bloom();

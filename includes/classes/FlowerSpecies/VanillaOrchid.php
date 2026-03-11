@@ -1,7 +1,7 @@
 <?php
 namespace MyProject\FlowerSpecies;
 
-use MyProject\Orchid;
+use MyProject\Types\Orchid;
 
 class VanillaOrchid extends Orchid {
     public function bloom() {
