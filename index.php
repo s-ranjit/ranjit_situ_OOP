@@ -66,10 +66,10 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
       <?php
    
 
-    $rose = new MyProject\rose();
+    $rose = new MyProject\Rose();
     // var_dump($rose);   
     
-    $lily = new MyProject\lily();
+    $lily = new MyProject\Lily();
     // var_dump($lily); 
     echo '<div class="grid-con flowers">';
     echo '<h2 class="col-span-full">Examples</h2>';
