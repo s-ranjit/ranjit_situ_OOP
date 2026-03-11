@@ -58,7 +58,9 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
     <main> 
         <section class="grid-con overview" id="overview">
         <h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Overview</h2>
-        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">This project demonstrates Object-Oriented Programming (OOP) in PHP using different flower classes.</p>
+        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">This project demonstrates Object-Oriented Programming (OOP)
+             in PHP by creating a hierarchy of flowers. It includes parent class, a child classes for
+              flower types, and grandchild classes for flower species.</p>
         </section>
 
        <?php
@@ -74,7 +76,7 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
         $flowertypes = [$rose, $lily, $daisy, $hibiscus, $orchid, $marigold];
 
         foreach ($flowertypes as $flower) {
-            var_dump($flower);
+            // var_dump($flower);
             echo "<h3 class='flower-name'>{$flower->name}</h3>";
             $flower->bloom();
             $flower->grow();
@@ -92,7 +94,7 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
         $flowerspecies = [$blackRose, $tigerLily, $lavenderDaisy, $spiderHibiscus, $vanillaOrchid];
 
         foreach ($flowerspecies as $flower) {
-            var_dump($flower);
+            // var_dump($flower);
             echo "<h3 class='flower-name'>{$flower->name}</h3>";
             $flower->bloom();
             $flower->grow();
