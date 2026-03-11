@@ -78,6 +78,23 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
             $flower->fragrance();
         }
         
+        // Species of flowers
+        $blackRose = new MyProject\FlowerSpecies\BlackRose("BlackRose", "Black", 15);
+        $tigerLily = new MyProject\FlowerSpecies\TigerLily("TigerLily", "Orange", 12);
+        $lavenderDaisy = new MyProject\FlowerSpecies\LavenderDaisy("LavenderDaisy", "Lavender", 18);
+        $spiderHibiscus = new MyProject\FlowerSpecies\SpiderHibiscus("SpiderHibiscus", "Orange", 6);
+        $vanillaOrchid = new MyProject\FlowerSpecies\VanillaOrchid("VanillaOrchid", "White", 9);
+
+        $flowerspecies = [$blackRose, $tigerLily, $lavenderDaisy, $spiderHibiscus, $vanillaOrchid];
+
+        foreach ($flowerspecies as $flower) {
+            var_dump($flower);
+            echo "<h3 class='flower-name'>{$flower->name}</h3>";
+            
+            $flower->bloom();
+            $flower->grow();
+            $flower->fragrance();
+        }
         
         ?>
 </main>
