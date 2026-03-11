@@ -1,7 +1,7 @@
 <?php
 
 namespace MyProject;
-class lily {
+class Lily {
 
 
 }
