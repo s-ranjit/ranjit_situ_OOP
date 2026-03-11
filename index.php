@@ -59,14 +59,6 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
         <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">This project demonstrates Object-Oriented Programming (OOP) in PHP using different flower classes.</p>
         </section>
 
-        <!-- <section class="grid-con usage">
-        <h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Usage</h2>
-        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">Simply instantiate any flower class from the <b>MyProject</b> namespace to see it in action.</p>
-        <pre>
-$rose = new MyProject\rose();
-$lily = new MyProject\lily();
-        </pre>
-    </section> -->
        <?php
        
         $rose = new MyProject\Rose("Rose", "Red", 10);
@@ -78,6 +70,12 @@ $lily = new MyProject\lily();
 
         $childrenflowers = [$rose, $lily, $daisy, $hibiscus, $orchid, $marigold];
 
+        foreach ($childrenflowers as $flower) {
+            var_dump($flower);
+            $flower->bloom();
+            $flower->grow();
+            $flower->fragrance();
+        }
         
         
         ?>
