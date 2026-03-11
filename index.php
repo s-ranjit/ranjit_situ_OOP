@@ -12,6 +12,8 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
     require_once $filepath;
 
     });
+    // filepath for trait 
+    require_once __DIR__ . '/includes/classes/trait/Watering.php';
 ?>
 
 <!DOCTYPE html>
@@ -59,24 +61,46 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
         <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">This project demonstrates Object-Oriented Programming (OOP) in PHP using different flower classes.</p>
         </section>
 
-        <section class="grid-con usage">
-        <h2 class="col-span-full m-col-start-2 m-col-end-4 l-col-span-full">Usage</h2>
-        <p class="col-span-full m-col-start-2 m-col-end-13 l-col-span-full">Simply use any flower class from the <b>MyProject</b> namespace to see it in action.</p>
-        </section>
-      <?php
-   
+       <?php
+       
+        // types of flowers
+        $rose = new MyProject\Types\Rose("Rose", "Red", 10);
+        $lily = new MyProject\Types\Lily("Lily", "White", 6);
+        $daisy = new MyProject\Types\Daisy("Daisy", "Yellow", 7);
+        $hibiscus = new MyProject\Types\Hibiscus("Hibiscus", "Pink", 5);
+        $orchid = new MyProject\Types\Orchid("Orchid", "Purple", 4);
+        $marigold = new MyProject\Types\Marigold("Marigold", "Orange", 18);
 
-    $rose = new MyProject\rose();
-    // var_dump($rose);   
-    
-    $lily = new MyProject\lily();
-    // var_dump($lily); 
-    echo '<div class="grid-con flowers">';
-    echo '<h2 class="col-span-full">Examples</h2>';
-    echo '<div class="flower-card col-span-full l-col-start-1 l-col-end-4"><span class="flower-name">Rose</span>: A beautiful red flower!</div>';
-    echo '<div class="flower-card col-span-full l-col-start-5 l-col-end-9"><span class="flower-name">Lily</span>: Elegant and fragrant flower!</div>';
-    echo '</p>'
-    ?>
+        $flowertypes = [$rose, $lily, $daisy, $hibiscus, $orchid, $marigold];
+
+        foreach ($flowertypes as $flower) {
+            var_dump($flower);
+            echo "<h3 class='flower-name'>{$flower->name}</h3>";
+            $flower->bloom();
+            $flower->grow();
+            $flower->fragrance();
+            $flower->water();
+        }
+        
+        // Species of flowers
+        $blackRose = new MyProject\FlowerSpecies\BlackRose("BlackRose", "Black", 15);
+        $tigerLily = new MyProject\FlowerSpecies\TigerLily("TigerLily", "Orange", 12);
+        $lavenderDaisy = new MyProject\FlowerSpecies\LavenderDaisy("LavenderDaisy", "Lavender", 18);
+        $spiderHibiscus = new MyProject\FlowerSpecies\SpiderHibiscus("SpiderHibiscus", "Orange", 6);
+        $vanillaOrchid = new MyProject\FlowerSpecies\VanillaOrchid("VanillaOrchid", "White", 9);
+
+        $flowerspecies = [$blackRose, $tigerLily, $lavenderDaisy, $spiderHibiscus, $vanillaOrchid];
+
+        foreach ($flowerspecies as $flower) {
+            var_dump($flower);
+            echo "<h3 class='flower-name'>{$flower->name}</h3>";
+            $flower->bloom();
+            $flower->grow();
+            $flower->fragrance();
+            $flower->water();
+        }
+        
+        ?>
 </main>
 </body>
 </html>
