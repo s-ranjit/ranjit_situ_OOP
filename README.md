@@ -1,12 +1,20 @@
 # OOP 
 
-<!-- ![project screenshot](images/image.png) -->
 
 ## 📚 Table of Contents
 - [Overview](#overview)
 - [Usage](#usage)
 - [Examples](#examples)
 
+## 🌸 Overview
+This project demonstrates **Object-Oriented Programming (OOP) in PHP** using a flower hierarchy:
+
+- `Flower` – parent class for all flowers, with properties like name, color, and petals.
+- `Types` – child classes that override some behaviors.
+- `FlowerSpecies` – grandchild class that specializes the behavior of `Rose`.
+- `Watering` trait – adds water to all the flowers sharing functionality
+
+The project showcases **class inheritance, method overriding, and traits** to manage shared behaviors.
 
 ## 🎨SASS Workflow
 1. 🎛 Variables (colors, fonts, spacing)
