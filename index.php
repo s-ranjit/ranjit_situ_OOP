@@ -12,7 +12,7 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
     require_once $filepath;
 
     });
-    // filepath for trait 
+    // filepath for trait to load manually 
     require_once __DIR__ . '/includes/classes/trait/Watering.php';
 ?>
 
@@ -81,7 +81,7 @@ $class = str_replace ("\\", DIRECTORY_SEPARATOR, $class);
             $flower->bloom();
             $flower->grow();
             $flower->fragrance();
-            $flower->water();
+            $flower->water();   // this is from watering.php trait
         }
         
         // Species of flowers
