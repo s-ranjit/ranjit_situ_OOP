@@ -1,1 +1,22 @@
 @use '../abstracts';
+
+.overview {
+    margin-top: 70px;
+    color: abstracts.$body-text-color;
+    p {
+        font-weight: abstracts.$font-regular;
+    } 
+}
+
+
+.flower-name {
+    font-weight: abstracts.$font-bold;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+@media screen and (min-width:768px) {
+    .overview {
+    margin-top: 130px;
+    }
+}
